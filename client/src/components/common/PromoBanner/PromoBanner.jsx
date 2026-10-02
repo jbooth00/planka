@@ -50,7 +50,7 @@ function isBannerDismissed(userId) {
 }
 
 const PromoBanner = React.memo(() => {
-  const userId = useSelector(selectors.selectCurrentUserId);
+  return null;
 
   const isAdmin = useSelector(
     (state) => selectors.selectCurrentUser(state).role === UserRoles.ADMIN,
