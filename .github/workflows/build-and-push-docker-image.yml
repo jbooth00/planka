@@ -57,7 +57,7 @@ jobs:
         id: set-version
         with:
           result-encoding: string
-          script: return context.payload.release.tag_name.replace('v', '')
+          script: return (context.payload.release?.tag_name || context.ref.replace('refs/heads/', '')).replace(/^v/, '')
 
       - name: Generate Docker image tags
         id: metadata
