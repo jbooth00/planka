@@ -55,6 +55,21 @@ const Editor = React.memo(({ data, onFieldChange }) => {
             onClick={onFieldChange}
           />
         ))}
+        <input
+          type="color"
+          name="color"
+          value={data.color || '#000000'}
+          onChange={onFieldChange}
+          style={{
+            width: '32px',
+            height: '32px',
+            padding: 0,
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            background: 'none',
+          }}
+        />
       </div>
     </>
   );
